@@ -46,6 +46,8 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
+    <gap:plugin source="npm" name="cordova-plugin-file" />
+    <gap:plugin source="npm" name="cordova-plugin-file-transfer" />
 <!--
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
