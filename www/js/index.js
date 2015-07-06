@@ -35,13 +35,14 @@ var app = {
     onDeviceReady: function() {
       try {
         app.receivedEvent('deviceready');
-        alert('File: '+JSON.stringify(File));
-        alert('FileTransfer: '+JSON.stringify(FileTransfer));
-        alert('FileTransferError: '+JSON.stringify(FileTransferError));
-        alert('FileUploadOptions: '+JSON.stringify(FileUploadOptions));
+        alert('File: '+JSON.stringify(window.File));
+        alert('FileTransfer: '+JSON.stringify(window.FileTransfer));
+        alert('FileTransferError: '+JSON.stringify(window.FileTransferError));
+        alert('FileUploadOptions: '+JSON.stringify(window.FileUploadOptions));
         alert(window.File);
         alert(window.FileTransfer);
         alert(window.FileTransferError);
+        alert(window.FileUploadOptions);
       }
       catch (e) {
         alert('ERROR: '+e.toString());
