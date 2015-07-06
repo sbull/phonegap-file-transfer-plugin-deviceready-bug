@@ -33,11 +33,15 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
       try {
+        app.receivedEvent('deviceready');
+        alert('File: '+JSON.stringify(File));
         alert('FileTransfer: '+JSON.stringify(FileTransfer));
         alert('FileTransferError: '+JSON.stringify(FileTransferError));
         alert('FileUploadOptions: '+JSON.stringify(FileUploadOptions));
+        alert(window.File);
+        alert(window.FileTransfer);
+        alert(window.FileTransferError);
       }
       catch (e) {
         alert('ERROR: '+e.toString());
