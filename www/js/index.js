@@ -34,6 +34,14 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+      try {
+        alert('FileTransfer: '+JSON.stringify(FileTransfer));
+        alert('FileTransferError: '+JSON.stringify(FileTransferError));
+        alert('FileUploadOptions: '+JSON.stringify(FileUploadOptions));
+      }
+      catch (e) {
+        alert('ERROR: '+e.toString());
+      }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
